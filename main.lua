@@ -1,11 +1,13 @@
+local canvas = {width = 600, height = 300}
+
 function love.load()
-    myCanvas = love.graphics.newCanvas(600, 300)
+    myCanvas = love.graphics.newCanvas(canvas.width, canvas.height)
 
     love.graphics.setCanvas(myCanvas)
         love.graphics.clear()
         love.graphics.setBlendMode("alpha")
         love.graphics.setColor(1, 1, 1, 1)
-        love.graphics.rectangle('fill', 0, 0, 600, 300)
+        love.graphics.rectangle('fill', 0, 0, canvas.width, canvas.height)
     love.graphics.setCanvas()
 end
 
